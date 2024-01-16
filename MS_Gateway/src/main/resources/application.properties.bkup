@@ -1,0 +1,15 @@
+spring.application.name=ms_gateway
+logging.level.root=INFO
+logging.level.org.springframework.cloud.gateway=TRACE
+logging.level.org.springframework.cloud.gateway.route.RouteDefinitionLocator=INFO
+
+## Routes
+spring.cloud.gateway.routes[0].id=ms_shopping
+spring.cloud.gateway.routes[0].uri=http://localhost:8081/
+spring.cloud.gateway.routes[0].predicates[0]=Path=/api/prdms/**, /static/prdms/**
+spring.cloud.gateway.routes[0].predicates[1]=Method=GET, POST, OPTIONS
+
+spring.cloud.gateway.routes[1].id=ms_feedback
+spring.cloud.gateway.routes[1].uri=http://localhost:8082/
+spring.cloud.gateway.routes[1].predicates[0]=Path=/api/fdbms/**, /static/fdbms/**
+spring.cloud.gateway.routes[1].predicates[1]=Method=OPTIONS, GET, POST

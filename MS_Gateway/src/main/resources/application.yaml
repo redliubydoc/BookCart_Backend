@@ -1,0 +1,33 @@
+logging:
+  level:
+    root: DEBUG
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+          gateway.route.RouteDefinitionLocator: INFO
+
+spring:
+  application:
+    name: ms_gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: ms_shopping
+          predicates:
+            - Path=/api/prdms/**, /static/prdms/**
+            - Method=OPTIONS, GET, POST, PUT
+          uri: http://localhost:8081/
+
+        - id: ms_feedback
+          predicates:
+            - Path=/api/fdbms/**, /static/fdbms/**
+            - Method=OPTIONS, GET, POST, PUT
+          uri: http://localhost:8082/
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: "*"

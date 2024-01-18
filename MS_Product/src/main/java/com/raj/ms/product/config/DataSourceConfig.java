@@ -10,15 +10,15 @@ import java.sql.SQLException;
 @Configuration
 public class DataSourceConfig {
 
-    @Bean
-    public DataSource getDataSource() throws SQLException {
+  @Bean
+  public DataSource getDataSource() throws SQLException {
 
-      OracleDataSource dataSource = new OracleDataSource();
+    OracleDataSource dataSource = new OracleDataSource();
 
-      dataSource.setURL("jdbc:oracle:thin:@localhost:1521/xepdb1");
-      dataSource.setUser("schema_bkcrt_ms_shopping");
-      dataSource.setPassword("schema_bkcrt_ms_shopping");
+    dataSource.setURL("jdbc:oracle:thin:@192.168.0.236:1521/xepdb1");
+    dataSource.setUser("schema_bkcrt_ms_product");
+    dataSource.setPassword("schema_bkcrt_ms_product");
 
-      return dataSource;
-    }
+    return dataSource;
+  }
 }

@@ -14,20 +14,19 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ms_shopping
+        - id: ms_product
+          uri: lb://msproduct
           predicates:
             - Path=/api/prdms/**, /static/prdms/**
-            - Method=OPTIONS, GET, POST, PUT
-          uri: http://localhost:8081/
 
         - id: ms_feedback
+          uri: lb://msfeedback
           predicates:
             - Path=/api/fdbms/**, /static/fdbms/**
-            - Method=OPTIONS, GET, POST, PUT
-          uri: http://localhost:8082/
+
       globalcors:
         corsConfigurations:
-          '[/**]':
+          "[/**]":
             allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods: "*"

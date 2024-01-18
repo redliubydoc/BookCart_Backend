@@ -18,7 +18,7 @@ public class GenreListMapper implements ResultSetMapper<List<GenreResponseData>>
 
         GenreResponseData genreResponseData = new GenreResponseData();
 
-        genreResponseData.setCode(resultSet.getInt("gen_cd"));
+        genreResponseData.setCode(resultSet.getString("gen_cd"));
         genreResponseData.setName(resultSet.getString("gen_nm"));
 
         genreResponseDataList.add(genreResponseData);

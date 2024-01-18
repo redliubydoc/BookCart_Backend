@@ -9,7 +9,7 @@
         <module name="MS_Feedback" />
         <module name="MS_Gateway" />
         <module name="MS_Product" />
-        <module name="Monolitic" />
+        <module name="MS_Discovery" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,7 +18,7 @@
       <module name="MS_Feedback" options="-parameters" />
       <module name="MS_Gateway" options="-parameters" />
       <module name="MS_Product" options="-parameters" />
-      <module name="Monolitic" options="-parameters" />
+      <module name="MS_Discovery" options="-parameters" />
     </option>
   </component>
 </project>

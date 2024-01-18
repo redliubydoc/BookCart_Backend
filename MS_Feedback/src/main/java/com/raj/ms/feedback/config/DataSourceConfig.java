@@ -15,9 +15,9 @@ public class DataSourceConfig {
 
     OracleDataSource dataSource = new OracleDataSource();
 
-    dataSource.setURL("jdbc:oracle:thin:@localhost:1521/xepdb1");
-    dataSource.setUser("schema_bkcrt_ms_feedback");
-    dataSource.setPassword("schema_bkcrt_ms_feedback");
+    dataSource.setURL("jdbc:oracle:thin:@192.168.0.236:1521/xepdb1");
+    dataSource.setUser("schema_bkcrt_ms_product");
+    dataSource.setPassword("schema_bkcrt_ms_product");
 
     return dataSource;
   }

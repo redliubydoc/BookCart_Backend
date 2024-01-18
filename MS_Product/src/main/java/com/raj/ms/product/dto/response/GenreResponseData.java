@@ -3,22 +3,22 @@ package com.raj.ms.product.dto.response;
 import java.util.StringJoiner;
 
 public class GenreResponseData {
-  private int Code;
+  private String Code;
   private String Name;
 
   public GenreResponseData() {
   }
 
-  public GenreResponseData(int code, String name) {
+  public GenreResponseData(String code, String name) {
     Code = code;
     Name = name;
   }
 
-  public int getCode() {
+  public String getCode() {
     return Code;
   }
 
-  public void setCode(int code) {
+  public void setCode(String code) {
     Code = code;
   }
 

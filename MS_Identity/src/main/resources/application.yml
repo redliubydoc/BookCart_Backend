@@ -1,16 +1,18 @@
 server:
-  port: 8083
+  port: 8081
 
 spring:
   application:
     name: ms-identity
+
   datasource:
     url: jdbc:oracle:thin:@192.168.0.236:1521/xepdb1
     username: schema_bkcrt_ms_identity
     password: schema_bkcrt_ms_identity
+
   jpa:
     properties:
       hibernate:
         show_sql: true
         hbm2ddl:
-          auto: create
+          auto: validate

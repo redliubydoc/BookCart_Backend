@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: ms-gateway
+
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: "*"
+#      routes:
+#        - id: ms-identity
+#          uri: lb://ms-identity
+#          predicates:
+#            - Path=/api/ms-identity/**
+#          filters:
+#            - name: AccessTokenAuthNGatewayFilter
+#
+#        - id: ms_product
+#          uri: lb://msproduct
+#          predicates:
+#            - Path=/api/prdms/**, /static/prdms/**
+#
+#        - id: ms_feedback
+#          uri: lb://msfeedback
+#          predicates:
+#            - Path=/api/fdbms/**, /static/fdbms/**
+#
+##logging:
+##  level:
+##    root: debug
+##    org:
+##      springframework:
+##        cloud:
+##          gateway: trace
+##          gateway.route.RouteDefinitionLocator: info

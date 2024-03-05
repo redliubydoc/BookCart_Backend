@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ms_discovery
+    name: ms-discovery
 
 eureka:
   client:

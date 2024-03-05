@@ -8,7 +8,15 @@
         <option value="$PROJECT_DIR$/MS_Product/pom.xml" />
         <option value="$PROJECT_DIR$/MS_Feedback/pom.xml" />
         <option value="$PROJECT_DIR$/MS_Discovery/pom.xml" />
+        <option value="$PROJECT_DIR$/MS_Auth/pom.xml" />
+        <option value="$PROJECT_DIR$/MS_Authentication/pom.xml" />
+        <option value="$PROJECT_DIR$/MS_Identity/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/MS_Auth/pom.xml" />
+      </set>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>

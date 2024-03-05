@@ -7,18 +7,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MS_Feedback" />
+        <module name="MS_Discovery" />
         <module name="MS_Gateway" />
         <module name="MS_Product" />
-        <module name="MS_Discovery" />
+        <module name="MS_Authentication" />
+        <module name="MS_Identity" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MS_Auth" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MS_Auth" options="-parameters" />
+      <module name="MS_Authentication" options="-parameters" />
+      <module name="MS_Discovery" options="-parameters" />
       <module name="MS_Feedback" options="-parameters" />
       <module name="MS_Gateway" options="-parameters" />
+      <module name="MS_Identity" options="-parameters" />
       <module name="MS_Product" options="-parameters" />
-      <module name="MS_Discovery" options="-parameters" />
     </option>
   </component>
 </project>
